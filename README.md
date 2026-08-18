@@ -1,5 +1,7 @@
 # Codex IDEA Selection Bridge
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 [![CI](https://github.com/liziing/codex-idea-selection-bridge/actions/workflows/ci.yml/badge.svg)](https://github.com/liziing/codex-idea-selection-bridge/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -38,7 +40,7 @@ The bridge endpoint returns location metadata only. It never returns the selecte
 
 ### 1. Install the IDEA plugin
 
-Download the IDEA plugin ZIP from the latest GitHub release, or build it locally:
+Download the IDEA plugin ZIP from the [latest GitHub release](https://github.com/liziing/codex-idea-selection-bridge/releases/latest), or build it locally:
 
 ```bash
 cd idea-plugin
@@ -127,15 +129,6 @@ Build against a local IDEA installation:
 ```
 
 The repository includes unit tests, IntelliJ Plugin Verifier checks, and GitHub Actions CI. Contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## 中文快速开始
-
-1. 安装 IDEA 插件 ZIP 并重启 IDEA。
-2. 将 `codex-skill/idea-selection` 复制到 `~/.codex/skills/idea-selection`。
-3. 在 IDEA 中保存文件并框选代码。
-4. 在打开同一项目的 Codex 任务中输入“解释这个代码”或“分析这段代码”。
-
-插件只向 Codex 提供文件路径和行号，不传输选中的代码文本。
 
 ## License
 
