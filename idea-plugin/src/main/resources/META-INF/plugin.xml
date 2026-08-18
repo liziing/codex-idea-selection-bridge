@@ -1,0 +1,17 @@
+<idea-plugin>
+    <id>com.wuhongtao.codex.idea-selection-bridge</id>
+    <name>Codex Selection Bridge</name>
+    <vendor url="https://github.com/liziing">Wu Hongtao</vendor>
+    <url>https://github.com/liziing/codex-idea-selection-bridge</url>
+
+    <description><![CDATA[
+        Exposes the current saved-file selection location from IntelliJ IDEA to a local Codex Skill.
+        The bridge returns only project path, file path, and line numbers; it never returns source code.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="com.wuhongtao.codex.ideaselection.BridgeStartupActivity"/>
+    </extensions>
+</idea-plugin>

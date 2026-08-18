@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: idea-plugin
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v6
+
+      - name: Test, build, and verify plugin
+        run: ./gradlew test buildPlugin verifyPlugin
+
+      - name: Upload IDEA plugin
+        uses: actions/upload-artifact@v7
+        with:
+          name: codex-selection-bridge
+          path: idea-plugin/build/distributions/*.zip
+          if-no-files-found: error

@@ -1,0 +1,53 @@
+name: Bug report
+description: Report reproducible incorrect behavior
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report a problem.
+
+  - type: input
+    id: idea-version
+    attributes:
+      label: IntelliJ IDEA version
+      placeholder: 2025.1.1.1
+    validations:
+      required: true
+
+  - type: input
+    id: codex-version
+    attributes:
+      label: Codex version
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Include the selection state, whether the file was saved, and the prompt used.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: sensitive-data
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed source code, credentials, and other sensitive data from this report.
+          required: true

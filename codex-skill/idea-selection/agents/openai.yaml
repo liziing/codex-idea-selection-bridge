@@ -1,0 +1,4 @@
+interface:
+  display_name: "IDEA Selection"
+  short_description: "读取并解释 IntelliJ IDEA 当前已保存的代码选区位置"
+  default_prompt: "Use $idea-selection to explain the code currently selected in IDEA."

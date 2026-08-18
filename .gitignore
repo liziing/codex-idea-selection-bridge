@@ -1,0 +1,8 @@
+.DS_Store
+.idea/
+*.iml
+*.zip
+
+idea-plugin/.gradle/
+idea-plugin/.intellijPlatform/
+idea-plugin/build/

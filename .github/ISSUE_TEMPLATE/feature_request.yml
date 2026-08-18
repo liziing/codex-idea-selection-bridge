@@ -1,0 +1,27 @@
+name: Feature request
+description: Suggest an improvement to the bridge or Skill
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What workflow is difficult today?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: privacy
+    attributes:
+      label: Privacy impact
+      description: Explain whether the proposal changes what data leaves IDEA or is persisted locally.
+    validations:
+      required: true
