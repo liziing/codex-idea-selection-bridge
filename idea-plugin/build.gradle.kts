@@ -1,6 +1,6 @@
 plugins {
     java
-    id("org.jetbrains.intellij.platform") version "2.18.1"
+    id("org.jetbrains.intellij.platform") version "2.20.0"
 }
 
 group = "com.wuhongtao.codex"
